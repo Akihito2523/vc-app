@@ -56,3 +56,8 @@ Route::get('controller/var', [App\http\Controllers\MessageController::class, 'va
 Route::get('controller/word/{msg}', [App\http\Controllers\MessageController::class, 'word']);
 
 Route::get('controller/word2/{name}/{msg}', [App\http\Controllers\MessageController::class, 'word2']);
+
+Route::get(
+    'language',
+    [App\http\Controllers\LanguageController::class, 'index']
+);
