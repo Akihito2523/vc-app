@@ -46,3 +46,13 @@ Route::get('view/word/{name}/{msg}', function ($name, $msg) {
         'msg' => $msg
     ]);
 });
+
+//コントローラーからViewを表示
+Route::get('controller/hello', [App\http\Controllers\MessageController::class, 'hello']);
+
+Route::get('controller/var', [App\http\Controllers\MessageController::class, 'var']);
+
+//URLパラメーターは{}に入れ、受け取った値はコントローラーに渡される
+Route::get('controller/word/{msg}', [App\http\Controllers\MessageController::class, 'word']);
+
+Route::get('controller/word2/{name}/{msg}', [App\http\Controllers\MessageController::class, 'word2']);

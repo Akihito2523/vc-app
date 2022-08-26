@@ -7,6 +7,7 @@
     <title>VCApp</title>
 </head>
 <body>
-<h1>{{ $name }}さん、{{ $msg }}</h1>
+{{-- キーの値を使える --}}
+<h1>{{ $name }}さん、{{ $msg }}です。</h1>
 </body>
 </html>
